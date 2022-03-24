@@ -1,5 +1,5 @@
 package main
-
+//ok
 import (
 	"bytes"
 	"fmt"
