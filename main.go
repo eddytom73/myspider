@@ -13,9 +13,10 @@ import (
 	"sync"
 	"time"
 )
+//sync
 var wg sync.WaitGroup
 func init() {
-	file := "./" +"message"+"_"+string(time.Now().Format("200601021504"))+ ".txt"
+	file := "./" +"spider"+"_"+string(time.Now().Format("200601021504"))+ ".txt"
 	logFile, err := os.OpenFile(file, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0766)
 	if err != nil {
 		log.Fatal(err)
@@ -25,7 +26,7 @@ func init() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile | log.LUTC)
 	return
 }
-
+//step 1
 func InitConfig(dirName string) {
 	workDir, _ := os.Getwd()
 	viper.SetConfigName("app")
